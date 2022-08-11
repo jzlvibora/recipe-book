@@ -11,6 +11,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { Section7DirectiveComponent } from './section7-directive/section7-directive.component';
+import { BasicHightlightDirective } from './section7-directive/basic-highlight/basic-hightlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Section7DirectiveComponent } from './section7-directive/section7-direct
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    Section7DirectiveComponent
+    Section7DirectiveComponent,
+    BasicHightlightDirective
   ],
   imports: [
     BrowserModule,
