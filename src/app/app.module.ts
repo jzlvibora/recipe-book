@@ -12,6 +12,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { Section7DirectiveComponent } from './section7-directive/section7-directive.component';
 import { BasicHightlightDirective } from './section7-directive/basic-highlight/basic-hightlight.directive';
+import { BetterHighlightDirective } from './section7-directive/better-highlight/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BasicHightlightDirective } from './section7-directive/basic-highlight/b
     ShoppingListComponent,
     ShoppingEditComponent,
     Section7DirectiveComponent,
-    BasicHightlightDirective
+    BasicHightlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
