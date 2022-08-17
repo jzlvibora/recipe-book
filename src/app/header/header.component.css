@@ -1,3 +1,7 @@
 .navbar-right li a{
     text-align: right;
 }
+
+.active{
+    background-color: rgba(26, 25, 24, 0.123);
+}
