@@ -12,18 +12,12 @@ export class RecipeItemComponent implements OnInit {
   //   new Recipe(' A Test Recipe', 'This is a test', 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80')
   // ];
 
-  @Input()
-  recipe!: Recipe;
+  
+  @Input() recipe!: Recipe;
   // @Output() recipeSelected=new EventEmitter<void>();
-
-  constructor(private recipeService:RecipeService) { }
 
   ngOnInit(){
   }
 
-  onSelected(){
-    this.recipeService.recipeSelected.emit(this.recipe);
-
-  }
 
 }
