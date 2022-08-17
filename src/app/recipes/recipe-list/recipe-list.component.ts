@@ -14,7 +14,7 @@ export class RecipeListComponent implements OnInit {
   //   new Recipe(' Strawberry Cupcake', 'This is a cake', 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
   // ];
 
-  @Output()recipeWasSelected = new EventEmitter<Recipe>();
+  // @Output()recipeWasSelected = new EventEmitter<Recipe>();
 
 
   constructor(private recipeService:RecipeService) { }
@@ -23,8 +23,8 @@ export class RecipeListComponent implements OnInit {
     this.recipes=this.recipeService.getRecipes();
   }
 
-  onRecipeSelected(recipe:Recipe){
-this.recipeWasSelected.emit(recipe);
-  }
+//   onRecipeSelected(recipe:Recipe){
+// this.recipeWasSelected.emit(recipe);
+//   }
 
 }
