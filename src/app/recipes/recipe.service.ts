@@ -11,29 +11,37 @@ export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
   recipeSelected=new Subject<Recipe>();
 
-  private recipes:Recipe[]=[
-    new Recipe(
-     ' A Test Recipe',
-     'This is a test',
-     'https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
-     [
-      new Ingredient('Avocado',1),
-      new Ingredient('Tomato', 2)
-    ]
-     ),
-    new Recipe(
-      'Strawberry Cupcake',
-      'This is a cake',
-      'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
-      [
-        new Ingredient('Strawberries', 5),
-        new Ingredient('Flour', 2),
-        new Ingredient('Milk', 3)
-      ])
-  ];
+  // private recipes:Recipe[]=[
+  //   new Recipe(
+  //    ' A Test Recipe',
+  //    'This is a test',
+  //    'https://images.unsplash.com/photo-1466637574441-749b8f19452f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+  //    [
+  //     new Ingredient('Avocado',1),
+  //     new Ingredient('Tomato', 2)
+  //   ]
+  //    ),
+  //   new Recipe(
+  //     'Strawberry Cupcake',
+  //     'This is a cake',
+  //     'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+  //     [
+  //       new Ingredient('Strawberries', 5),
+  //       new Ingredient('Flour', 2),
+  //       new Ingredient('Milk', 3)
+  //     ])
+  // ];
+
+  private recipes:Recipe[]=[];
 
   getRecipes(){
     return this.recipes.slice();
+  }
+
+  setRecipes(recipes:Recipe[]){
+    this.recipes=recipes;
+    this.recipesChanged.next(this.recipes.slice());
+
   }
 
   getRecipe(index:number){
