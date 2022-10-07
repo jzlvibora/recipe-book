@@ -37,6 +37,9 @@ activeLink='recipe';
 //// https://www.youtube.com/watch?v=bkk54vMovk8
 //// https://www.youtube.com/watch?v=FITI5ASi6dQ
 ///// pipe - use inorder to apply different functions(operators) to observable-just imagine pipe in real life
+////  A Subject is a special type of Observable that allows values to be multicasted to many Observers. Subjects are like EventEmitters.
+//// Use Eventemitter when transferring data from child component to parent component.
+//// Use Subject to transfer data from one component to another component.
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
   
